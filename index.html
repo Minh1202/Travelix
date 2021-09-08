@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="//db.onlinewebfonts.com/c/41f5e8ff1d98d490a19c6d48ea7b74b1?family=Beyond+The+Mountains" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="grid">
+                <div class="header__top-bar">
+                    <div class="grid wide">
+                        <div class="row">
+                            <div class="phone">+84 367 557 998</div>
+                            <div class="header__top-bar-item">
+                                <i class="fab fa-facebook-square"></i>
+                                <i class="fab fa-twitter-square"></i>
+                                <i class="fab fa-youtube-square"></i>
+                                <i class="fab fa-google-plus-square"></i>
+                                <i class="fab fa-app-store-ios"></i>
+                                <i class="fab fa-google-play"></i>
+                            </div>
+                            <div class="account">
+                                <div class="account__login">
+                                    <a href="#">LOGIN</a>
+                                </div>
+                                <div class="account__register">
+                                    <a href="#">REGISTER</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__nav">
+                    <div class="grid wide">
+                        <div class="row">
+                            <div class="col l-4 header__nav-logo">
+                                <img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA"
+                                    alt="">
+                                <H2>TRAVELIX</H2>
+                            </div>
+                            <div class="col l-6 header__nav-menu">
+                                <ul>
+                                    <li><a href="">HOME</a></li>
+                                    <li><a href="">ABOUT US</a></li>
+                                    <li><a href="">OFFERS</a></li>
+                                    <li><a href="">NEWS</a></li>
+                                    <li><a href="">CONTACT</a></li>
+                                </ul>
+                            </div>
+                            <div class=" header__search">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="container__img-top">
+                <div class="grid wide">
+                    <div class="container__img-top-text-child">
+                        <h1>DISCOVER</h1>
+                        <h1>the world</h1>
+                        <div class="container__btn-top">
+                            <a href="">EXPLORE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__search">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="container__search-navbar">
+                            <div class="col l-2 container__search-navbar-item active">
+                                <p><i class="fas fa-home"></i> Hotels</p>
+                            </div>
+                            <div class="col l-2 container__search-navbar-item">
+                                <p><i class="fas fa-truck"></i> car rentals</p>
+                            </div>
+                            <div class="col l-2 container__search-navbar-item">
+                                <p><i class="fas fa-plane"></i> flights</p>
+                            </div>
+                            <div class="col l-2 container__search-navbar-item">
+                                <p><i class="fas fa-cannabis"></i> trips</p>
+                            </div>
+                            <div class="col l-2 container__search-navbar-item">
+                                <p><i class="fas fa-ship"></i> ctuises</p>
+                            </div>
+                            <div class="col l-2 container__search-navbar-item">
+                                <p><i class="fas fa-skiing"></i> activities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__search-main">
+                        <div class="container__search-item">
+                            <p>DESTINATION</p>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="container__search-item">
+                            <p>CHECK IN</p>
+                            <input type="text" placeholder="YYYY-MM-DD">
+                        </div>
+                        <div class="container__search-item">
+                            <p>CHECK OUT</p>
+                            <input type="text" placeholder="YYYY-MM-DD">
+                        </div>
+                        <div class="container__search-item">
+                            <p>ADULTS</p>
+                            <select name="adults" id="">
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                            </select>
+                        </div>
+                        <div class="container__search-item">
+                            <p>CHILDREN</p>
+                            <select name="children" id="">
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                            </select>
+                        </div>
+                        <div class="container__search-item">
+                            <div class="container__search-item-btn">
+                                <a href="#">Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__title-top">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="container__title-top-main">We have the best tours</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-12">
+                            <p class="container__title-top-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Nullam eu convallis tortor.
+                                Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+                        </div>
+                    </div>
+                    <div class="container__title-top-form">
+                        <div class="top-form">
+                            <div class="top-form-header">
+                                <div class="top-form-header-text">
+                                    May 25th - June 01st
+                                </div>
+
+                            </div>
+                            <div class="top-form-main">
+                                <h1>Mauritius</h1>
+                                <p>From $1450</p>
+                                <div class="top-form-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="top-form-footer">
+                                <div class="container__btn-top">
+                                    <a href="">SEE MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-form">
+                            <div class="top-form-header">
+                                <div class="top-form-header-text">
+                                    May 25th - June 01st
+                                </div>
+
+                            </div>
+                            <div class="top-form-main">
+                                <h1>Greece</h1>
+                                <p>From $1450</p>
+                                <div class="top-form-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="top-form-footer">
+                                <div class="container__btn-top">
+                                    <a href="">SEE MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-form">
+                            <div class="top-form-header">
+                                <div class="top-form-header-text">
+                                    May 25th - June 01st
+                                </div>
+
+                            </div>
+                            <div class="top-form-main">
+                                <h1>Scotland</h1>
+                                <p>From $1450</p>
+                                <div class="top-form-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="top-form-footer">
+                                <div class="container__btn-top">
+                                    <a href="">SEE MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container__form">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-12">
+                            <div class="container__form-main ">
+                                <h1>maldives deluxe package</h1>
+                                <div class="top-form-main-icon container__form-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium molestias,
+                                    architecto
+                                    adipisci vero, ipsum soluta facilis harum ducimus corrupti alias quae officia
+                                    cupiditate
+                                    amet veritatis error fugiat, quis facere qui?</p>
+                                <div class="top-form-footer container__form-main-btn ">
+                                    <div class="container__btn-top">
+                                        <a href="">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__form-review">
+                <div class="grid wide">
+                    <div class="container__form-review-title">
+                        <h1>THE BEST OFFERS WITH ROOMS</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col l-6 form-review-left">
+                            <div class="form-review-img-1">
+                                <div class="form-review-img-text">
+                                    grand castle
+                                </div>
+                            </div>
+                            <div class="form-review-main">
+                                <div class="form-review-main-title">
+                                    <h1>$70 </h1>
+                                    <p>per night</p>
+                                </div>
+
+                                <div class="top-form-main-icon form-review-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nullam eu convallis tortor.</p>
+                                <div class="form-review-main-item">
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                </div>
+                                <div class="form-review-main-link">
+                                    <a href="#">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6 form-review-right">
+                            <div class="form-review-img-2">
+                                <div class="form-review-img-text">
+                                    turkey hills
+                                </div>
+                            </div>
+                            <div class="form-review-main">
+                                <div class="form-review-main-title">
+                                    <h1>$70 </h1>
+                                    <p>per night</p>
+                                </div>
+
+                                <div class="top-form-main-icon form-review-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nullam eu convallis tortor.</p>
+                                <div class="form-review-main-item">
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                </div>
+                                <div class="form-review-main-link">
+                                    <a href="#">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col l-6 form-review-left">
+                            <div class="form-review-img-3">
+                                <div class="form-review-img-text">
+                                    island dream
+                                </div>
+                            </div>
+                            <div class="form-review-main">
+                                <div class="form-review-main-title">
+                                    <h1>$70 </h1>
+                                    <p>per night</p>
+                                </div>
+
+                                <div class="top-form-main-icon form-review-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nullam eu convallis tortor.</p>
+                                <div class="form-review-main-item">
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                </div>
+                                <div class="form-review-main-link">
+                                    <a href="#">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6 form-review-right">
+                            <div class="form-review-img-4">
+                                <div class="form-review-img-text">
+                                    travel light
+                                </div>
+                            </div>
+                            <div class="form-review-main">
+                                <div class="form-review-main-title">
+                                    <h1>$70 </h1>
+                                    <p>per night</p>
+                                </div>
+
+                                <div class="top-form-main-icon form-review-main-icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nullam eu convallis tortor.</p>
+                                <div class="form-review-main-item">
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-eye"></i>
+                                </div>
+                                <div class="form-review-main-link">
+                                    <a href="#">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__form-review-2">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col container__form-review-2-title">
+                            <h1>WHAT OUR CLIENTS SAY ABOUT US</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col l-4 container__form-review-2-content">
+                            <div class="content-img">
+                                <img src="./assets/images/xtest_1.jpg.pagespeed.ic.-6ItEd8cDS.webp" alt="">
+                            </div>
+                            <div class="content-icon">
+                                <i class="fas fa-suitcase"></i>
+                            </div>
+                            <div class="content-text">
+                                <div class="text-form-small">
+                                    <h2>carla smith</h2>
+                                    <p>May 24, 2017</p>
+                                </div>
+                                <h1>"Best holliday ever"</h1>
+                                <h3>Nullam eu convallis tortor.Suspendisse potenti. In faucibus massa arcu, vitae cursus
+                                    mi hendrerit nec. </h3>
+                            </div>
+                        </div>
+                        <div class="col l-4 container__form-review-2-content">
+                            <div class="content-img">
+                                <img src="./assets/images/xtest_2.jpg.pagespeed.ic.PdNyty5fyM.webp" alt="">
+                            </div>
+                            <div class="content-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div class="content-text">
+                                <div class="text-form-small">
+                                    <h2>carla smith</h2>
+                                    <p>May 24, 2017</p>
+                                </div>
+                                <h1>"Best holliday ever"</h1>
+                                <h3>Nullam eu convallis tortor.Suspendisse potenti. In faucibus massa arcu, vitae cursus
+                                    mi hendrerit nec. </h3>
+                            </div>
+                        </div>
+                        <div class="col l-4 container__form-review-2-content">
+                            <div class="content-img">
+                                <img src="./assets/images/xtest_3.jpg.pagespeed.ic.ewoEOM4gUF.webp" alt="">
+                            </div>
+                            <div class="content-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <div class="content-text">
+                                <div class="text-form-small">
+                                    <h2>carla smith</h2>
+                                    <p>May 24, 2017</p>
+                                </div>
+                                <h1>"Best holliday ever"</h1>
+                                <h3>Nullam eu convallis tortor.Suspendisse potenti. In faucibus massa arcu, vitae cursus
+                                    mi hendrerit nec. </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

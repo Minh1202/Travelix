@@ -1,0 +1,27 @@
+:root {
+    --text : #ccc;
+    --white :#fff;
+    --violet : rgba(53,10,78,1);
+    --primary-1 :#fa9e1b;
+    --primary-2 : #8d4fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.5em;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+ color: rgb(148, 141, 141);
+}
